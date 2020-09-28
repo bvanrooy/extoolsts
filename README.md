@@ -1,2 +1,0 @@
-# extoolsts
-excercise for STS 
