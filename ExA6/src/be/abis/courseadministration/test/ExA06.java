@@ -27,26 +27,43 @@ public class ExA06 {
 	
 
 
-	for(Person person:persons) {
-		System.out.println(person.printInfo());
-	}
-
-
+		for(Person person:persons) {
+			System.out.println(person.printInfo());
+		}
 	
-	try {
-		FileUtil.writeToFile((ArrayList<String>) persons.stream().collect((Collectors.mapping(Person::printInfo, Collectors.toList()))),"persons.txt");
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	
+		
+		try {
+			FileUtil.writeToFile((ArrayList<String>) persons.stream().collect((Collectors.mapping(Person::printInfo, Collectors.toList()))),"persons.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+		ArrayList<Instructor> instructors = new ArrayList<>();
+		instructors.add(new Instructor("Sandy","Schillebeeckx",LocalDate.of(1978,1,3),20,2000));
+		instructors.add(new Instructor("Luigi","Instructore",LocalDate.of(1950,1,3),23,1750));
+	    instructors.add(new Instructor("Bart","Van Rooy",LocalDate.of(1965,8,7),22,2100));
+	    
+	    try 
+	    {
+		    for(Instructor instructor : instructors) {
+		    	ArrayList<String>salaryLines = instructor.getSalaryHistory();
+		    	for(String line:salaryLines) {
+		    		System.out.println(line);
+		    	}
+		    	FileUtil.writeToFile(salaryLines, "Salary_" + instructor.getFirstName() + instructor.getLastName() + ".txt" );
+		    }
+	    }
+	    catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	
+		for(Instructor instructor:instructors) {
+			System.out.println(instructor.printInfo());
+		}
 	}
 
-	ArrayList<Instructor> instructors = new ArrayList<>();
-	instructors.add(new Instructor("Sandy","Schillebeeckx",LocalDate.of(1978,1,3),20,2000));
-	instructors.add(new Instructor("Luigi","Instructore",LocalDate.of(1950,1,3),23,1750));
-    instructors.add(new Instructor("Bart","Van Rooy",LocalDate.of(1965,8,7),22,2100));
-    
-    for(Instructor instructor : instructors) {
-    	instructor.printSalaryHistory();
-    }
-}
 }

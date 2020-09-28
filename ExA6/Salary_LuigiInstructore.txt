@@ -1,0 +1,26 @@
+
+
+Instructor Luigi Instructore has 70 years and started at Abis at age 23 at a salary of 1750.0
+
+Salary of Luigi Instructore at 23 is 1750.0
+Salary of Luigi Instructore at 28 is 1802.5
+Salary of Luigi Instructore at 33 is 1856.575
+Salary of Luigi Instructore at 38 is 1912.27225
+Salary of Luigi Instructore at 43 is 1969.6404175
+Salary of Luigi Instructore at 48 is 2028.729630025
+Salary of Luigi Instructore at 53 is 2089.5915189257503
+Salary of Luigi Instructore at 58 is 2152.279264493523
+Maximum salary reached
+
+
+Instructor Luigi Instructore has 70 years and started at Abis at age 23 at a salary of 1750.0
+
+Salary of Luigi Instructore at 23 is 1750.0
+Salary of Luigi Instructore at 28 is 1802.5
+Salary of Luigi Instructore at 33 is 1856.575
+Salary of Luigi Instructore at 38 is 1912.27225
+Salary of Luigi Instructore at 43 is 1969.6404175
+Salary of Luigi Instructore at 48 is 2028.729630025
+Salary of Luigi Instructore at 53 is 2089.5915189257503
+Salary of Luigi Instructore at 58 is 2152.279264493523
+Maximum salary reached

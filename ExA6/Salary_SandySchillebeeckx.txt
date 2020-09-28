@@ -1,0 +1,18 @@
+
+
+Instructor Sandy Schillebeeckx has 42 years and started at Abis at age 20 at a salary of 2000.0
+
+Salary of Sandy Schillebeeckx at 20 is 2000.0
+Salary of Sandy Schillebeeckx at 25 is 2060.0
+Salary of Sandy Schillebeeckx at 30 is 2121.8
+Salary of Sandy Schillebeeckx at 35 is 2185.454
+Salary of Sandy Schillebeeckx at 40 is 2251.01762
+
+
+Instructor Sandy Schillebeeckx has 42 years and started at Abis at age 20 at a salary of 2000.0
+
+Salary of Sandy Schillebeeckx at 20 is 2000.0
+Salary of Sandy Schillebeeckx at 25 is 2060.0
+Salary of Sandy Schillebeeckx at 30 is 2121.8
+Salary of Sandy Schillebeeckx at 35 is 2185.454
+Salary of Sandy Schillebeeckx at 40 is 2251.01762

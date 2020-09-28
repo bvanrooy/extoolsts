@@ -78,3 +78,33 @@ Person (2)
 John Doe
 Age  : 54
 Company : 
+Person (1)
+---------------------------------------
+Ann Smits
+Age  : 35
+Company : Company [name=Abis, address=Address [street=Diestsevest, number=22, zipCode=3000, town=Leuven, country=Belgium, countryCode=BE]]
+Person (2)
+---------------------------------------
+John Doe
+Age  : 54
+Company : 
+Person (1)
+---------------------------------------
+Ann Smits
+Age  : 35
+Company : Company [name=Abis, address=Address [street=Diestsevest, number=22, zipCode=3000, town=Leuven, country=Belgium, countryCode=BE]]
+Person (2)
+---------------------------------------
+John Doe
+Age  : 54
+Company : 
+Person (1)
+---------------------------------------
+Ann Smits
+Age  : 35
+Company : Company [name=Abis, address=Address [street=Diestsevest, number=22, zipCode=3000, town=Leuven, country=Belgium, countryCode=BE]]
+Person (2)
+---------------------------------------
+John Doe
+Age  : 54
+Company : 

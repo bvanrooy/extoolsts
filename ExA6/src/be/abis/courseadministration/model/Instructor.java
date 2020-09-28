@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 
 public class Instructor extends Person{
 
@@ -46,39 +47,45 @@ public class Instructor extends Person{
 		this.startSalary = startSalary;
 	}
   
+ 
     
-    public void printSalaryHistory() {
-        int seniority = 0;
+    public ArrayList<String> getSalaryHistory(){
+    	int seniority = 0;
         int age = this.startAge;
         double salaryAtAge = this.startSalary;
         String line;
-
-        try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("salaryhistory.txt"))) {
-            line = "\n\nInstructor " + this.getFirstName() + " " + this.getLastName() 
+        ArrayList<String> lines = new ArrayList<>();
+        
+        line = "\n\nInstructor " + this.getFirstName() + " " + this.getLastName() 
             	+ " has " + this.calculateAge() 
             	+ " years and started at Abis at age " + startAge
             	+ " at a salary of " + startSalary + "\n";
-            System.out.println(line);
-            bw.write(line);
+        
+        lines.add(line);
 
-            while (age <  calculateAge()) {
-                line = "Salary of " + getFirstName() + " " + getLastName() + " at " + age + " is " + salaryAtAge;
-                System.out.println(line);
-                bw.write(line + "\n");
-                age += 5;
-                seniority += 5;
-                if (seniority <= 35) {
-                    salaryAtAge *= 1.03;
-                } else {
-                    line = "Maximum salary reached";
-                    System.out.println(line);
-                    bw.write(line + "\n");
-                    break;
-                }
+        while (age <  calculateAge()) {
+            line = "Salary of " + getFirstName() + " " + getLastName() + " at " + age + " is " + salaryAtAge;
+            lines.add(line);
+            age += 5;
+            seniority += 5;
+            if (seniority <= 35) {
+                salaryAtAge *= 1.03;
+            } else {
+            	line = "Maximum salary reached";
+            	lines.add(line);
+                break;
             }
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        
+        return lines;
+
+
     }
+
+	@Override
+	public String printInfo() {
+		return "Instructor " + getFirstName() + " " + getLastName() + " started at " + this.startAge + " and earned " + this.startSalary + " when he/she started";
+	}
+    
+    
 }
