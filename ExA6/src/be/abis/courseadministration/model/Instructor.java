@@ -7,66 +7,28 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Instructor{
+public class Instructor extends Person{
 
-    private String firstName;
-    private String lastName;
-    private LocalDate birthDate;
     private int startAge;
 	private double startSalary;
 
     public Instructor(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    	super(firstName, lastName);
     }
 
     public Instructor(String firstName, String lastName, LocalDate birthDate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
+    	super(firstName, lastName, birthDate);
     }
     
     
 
     public Instructor(String firstName, String lastName, LocalDate birthDate, int startAge, double startSalary) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthDate = birthDate;
+    	super(firstName, lastName, birthDate);
 		this.startAge = startAge;
 		this.startSalary = startSalary;
 	}
 
-	public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public int getAge(){
-        if(this.birthDate != null){
-          return Period.between(this.birthDate,LocalDate.now()).getYears();
-        }
-        return 0;
-    }
+   
 
     public int getStartAge() {
 		return startAge;
@@ -83,10 +45,7 @@ public class Instructor{
 	public void setStartSalary(double startSalary) {
 		this.startSalary = startSalary;
 	}
-
-
-
-    
+  
     
     public void printSalaryHistory() {
         int seniority = 0;
@@ -95,14 +54,15 @@ public class Instructor{
         String line;
 
         try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("salaryhistory.txt"))) {
-            line = "\n\nInstructor " + this.firstName + " " + this.lastName + " has " + this.getAge()
-                    + " years and started at Abis at age " + startAge
-                    + " at a salary of " + startSalary + "\n";
+            line = "\n\nInstructor " + this.getFirstName() + " " + this.getLastName() 
+            	+ " has " + this.calculateAge() 
+            	+ " years and started at Abis at age " + startAge
+            	+ " at a salary of " + startSalary + "\n";
             System.out.println(line);
             bw.write(line);
 
-            while (age <  this.getAge()) {
-                line = "Salary of " + firstName + " " + lastName + " at " + age + " is " + salaryAtAge;
+            while (age <  calculateAge()) {
+                line = "Salary of " + getFirstName() + " " + getLastName() + " at " + age + " is " + salaryAtAge;
                 System.out.println(line);
                 bw.write(line + "\n");
                 age += 5;
