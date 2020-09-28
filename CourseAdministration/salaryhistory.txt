@@ -1,0 +1,10 @@
+
+
+Instructor Bart Van Rooy has 55 years and started at Abis at age 21 at a salary of 2000.0
+Salary of Bart Van Rooy at 21 is 2000.0
+Salary of Bart Van Rooy at 26 is 2060.0
+Salary of Bart Van Rooy at 31 is 2121.8
+Salary of Bart Van Rooy at 36 is 2185.454
+Salary of Bart Van Rooy at 41 is 2251.01762
+Salary of Bart Van Rooy at 46 is 2318.5481486000003
+Salary of Bart Van Rooy at 51 is 2388.1045930580003
