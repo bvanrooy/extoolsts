@@ -12,6 +12,8 @@ public class Instructor{
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
+    private int startAge;
+	private double startSalary;
 
     public Instructor(String firstName, String lastName) {
         this.firstName = firstName;
@@ -23,8 +25,19 @@ public class Instructor{
         this.lastName = lastName;
         this.birthDate = birthDate;
     }
+    
+    
 
-    public String getFirstName() {
+    public Instructor(String firstName, String lastName, LocalDate birthDate, int startAge, double startSalary) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+		this.startAge = startAge;
+		this.startSalary = startSalary;
+	}
+
+	public String getFirstName() {
         return firstName;
     }
 
@@ -55,11 +68,30 @@ public class Instructor{
         return 0;
     }
 
+    public int getStartAge() {
+		return startAge;
+	}
 
-    public void printSalaryHistory(int startAge, double startSalary) {
+	public void setStartAge(int startAge) {
+		this.startAge = startAge;
+	}
+
+	public double getStartSalary() {
+		return startSalary;
+	}
+
+	public void setStartSalary(double startSalary) {
+		this.startSalary = startSalary;
+	}
+
+
+
+    
+    
+    public void printSalaryHistory() {
         int seniority = 0;
-        int age = startAge;
-        double salaryAtAge = startSalary;
+        int age = this.startAge;
+        double salaryAtAge = this.startSalary;
         String line;
 
         try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("salaryhistory.txt"))) {

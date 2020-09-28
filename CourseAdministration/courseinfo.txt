@@ -34,3 +34,39 @@ Number of instructors   : 1
 		Instructor : Bart Van Rooy
 
 -----------------------------------------------------------
+Course
+-----------------------------------------------------
+Title                   : Java fundamentals
+Number of days          : 5
+Price / day             : 333.0
+Total Price VAT Incl    : 2014.65 (EXPENSIVE)
+Prior knowledge needed  : false
+Number of instructors   : 2
+		Instructor : Sandy Schillebeeckx
+		Instructor : Luigi Instructore
+
+-----------------------------------------------------------
+Course
+-----------------------------------------------------
+Title                   : Java advanced
+Number of days          : 5
+Price / day             : 253.0
+Total Price VAT Incl    : 1265.0 (OK)
+Prior knowledge needed  : true
+Number of instructors   : 3
+		Instructor : Sandy Schillebeeckx
+		Instructor : Luigi Instructore
+		Instructor : Bart Van Rooy
+
+-----------------------------------------------------------
+Course
+-----------------------------------------------------
+Title                   : Spring fundamentals
+Number of days          : 3
+Price / day             : 211.0
+Total Price VAT Incl    : 765.9300000000001 (OK)
+Prior knowledge needed  : true
+Number of instructors   : 1
+		Instructor : Bart Van Rooy
+
+-----------------------------------------------------------

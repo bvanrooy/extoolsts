@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import be.abis.courseadmin.model.Course;
 import be.abis.courseadmin.model.Instructor;
 
-import static java.time.LocalDate.*;
-
 public class ExF04{
 
     public static void main(String[] args){
@@ -16,9 +14,9 @@ public class ExF04{
         ArrayList<Course> courses = new ArrayList<>();
         ArrayList<Instructor>instructors=new ArrayList<>();
 
-        instructors.add(new Instructor("Sandy","Schillebeeckx"));
-        instructors.add(new Instructor("Luigi","Instructore"));
-        instructors.add(new Instructor("Bart","Van Rooy"));
+        instructors.add(new Instructor("Sandy","Schillebeeckx",LocalDate.of(1978,1,3),20,2000));
+        instructors.add(new Instructor("Luigi","Instructore",LocalDate.of(1950,1,3),23,1750));
+        instructors.add(new Instructor("Bart","Van Rooy",LocalDate.of(1965,8,7),22,2100));
 
         courses.add(new Course("Java fundamentals",5,333,false));
         courses.add(new Course("Java advanced",5,253,true));
@@ -44,13 +42,8 @@ public class ExF04{
             }
         }
 
-        instructors.get(0).setBirthDate(LocalDate.of(1978,1,3));
-        instructors.get(0).printSalaryHistory(20,2000);
-
-        instructors.get(1).setBirthDate(LocalDate.of(1950,1,3));
-        instructors.get(1).printSalaryHistory(23,3000);
-
-        instructors.get(2).setBirthDate(LocalDate.of(1965,8,7));
-        instructors.get(2).printSalaryHistory(21,2000);
+        instructors.get(0).printSalaryHistory();
+        instructors.get(1).printSalaryHistory();
+        instructors.get(2).printSalaryHistory();
         }
     }
